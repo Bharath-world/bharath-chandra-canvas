@@ -25,16 +25,27 @@ const Hero = ({ darkMode }: HeroProps) => {
             <h2 className={`text-xl md:text-2xl mb-6 ${
               darkMode ? 'text-gray-300' : 'text-gray-600'
             }`}>
-              Fresher Software Developer
+              UI/UX Designer | Web Developer | Creative Technophile
             </h2>
             <p className={`text-lg mb-8 leading-relaxed ${
               darkMode ? 'text-gray-400' : 'text-gray-700'
             }`}>
-              Passionate about creating innovative solutions with modern technologies. 
-              Specializing in Python, React, and web development with a keen eye for 
-              design and user experience.
+              I'm a Computer Science graduate from Sreyas Institute of Engineering and Technology, 
+              passionate about design and development with a keen eye for user experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <button
+                onClick={() => {
+                  // Create a temporary link to trigger download
+                  const link = document.createElement('a');
+                  link.href = '/placeholder-resume.pdf'; // This would be replaced with actual resume
+                  link.download = 'Bharath_Chandra_Resume.pdf';
+                  link.click();
+                }}
+                className="px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              >
+                Download Resume
+              </button>
               <button
                 onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"

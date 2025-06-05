@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import Resume from '../components/Resume';
 import Contact from '../components/Contact';
@@ -42,6 +44,7 @@ const Index = () => {
       <Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero darkMode={darkMode} />
       <About darkMode={darkMode} />
+      <Experience darkMode={darkMode} />
       <Projects darkMode={darkMode} />
       <Resume darkMode={darkMode} />
       <Contact darkMode={darkMode} />

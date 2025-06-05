@@ -16,7 +16,7 @@ const Chatbot = ({ darkMode }: ChatbotProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
-      text: "Hi! I'm Bharath's AI assistant. Ask me about his skills, education, or projects!",
+      text: "Hi! I'm Bharath's AI assistant. Ask me about his skills, education, projects, or experience!",
       isBot: true,
       timestamp: new Date()
     }
@@ -36,34 +36,46 @@ const Chatbot = ({ darkMode }: ChatbotProps) => {
     const message = userMessage.toLowerCase();
     
     if (message.includes('skill') || message.includes('technology') || message.includes('tech')) {
-      return "Bharath is skilled in Python, React, HTML, CSS, JavaScript, and web development. He's passionate about creating innovative solutions with modern technologies!";
+      return "Bharath is skilled in Python, HTML, CSS, JavaScript, React, MongoDB, and MySQL. He's also experienced in UI/UX design and data analysis!";
     }
     
-    if (message.includes('education') || message.includes('study') || message.includes('degree')) {
-      return "Bharath is a fresher software developer with a strong educational background in computer science and software development.";
+    if (message.includes('education') || message.includes('study') || message.includes('degree') || message.includes('college')) {
+      return "Bharath is a Computer Science graduate from Sreyas Institute of Engineering and Technology. He's passionate about both development and design!";
     }
     
     if (message.includes('project') || message.includes('work') || message.includes('portfolio')) {
-      return "You can check out Bharath's projects in the Projects section above! He has worked on various web development projects showcasing his skills in React and Python.";
+      return "Bharath has worked on a Movie Recommendation System using Python and ML, UI/UX design projects, and data analysis dashboards. Check out the Projects section for more details!";
     }
     
-    if (message.includes('experience') || message.includes('fresher')) {
-      return "Bharath is a fresher software developer who is eager to start his career. Despite being new to the industry, he has strong technical skills and a passion for learning.";
+    if (message.includes('experience') || message.includes('internship') || message.includes('job')) {
+      return "Bharath has completed internships as a Gen AI Intern at Systemtron and as a Graphic Designer at InAmigos Foundation. He also has certifications from Accenture and IBM!";
+    }
+    
+    if (message.includes('certification') || message.includes('certificate')) {
+      return "Bharath has certifications in Data Analysis with Python from Accenture and completed an IBM Job Simulation through Forage.";
     }
     
     if (message.includes('interest') || message.includes('hobby') || message.includes('passion')) {
-      return "Besides coding, Bharath is interested in video editing, communication, fashion, and cinema. He believes in maintaining a good work-life balance!";
+      return "Besides coding, Bharath is passionate about cinema, video editing, fashion, and UI design. He believes in balancing technical skills with creative pursuits!";
     }
     
-    if (message.includes('contact') || message.includes('reach') || message.includes('hire')) {
-      return "You can reach out to Bharath through the Contact section above or connect with him on LinkedIn and GitHub. He's always open to new opportunities!";
+    if (message.includes('contact') || message.includes('reach') || message.includes('hire') || message.includes('email')) {
+      return "You can reach Bharath at bharathchandr2002@gmail.com or call +91 7995237067. He's also active on GitHub, LinkedIn, and Behance!";
+    }
+    
+    if (message.includes('location') || message.includes('where') || message.includes('place')) {
+      return "Bharath is based in Hyderabad, India and is open to both local and remote opportunities!";
     }
     
     if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
-      return "Hello! I'm here to help you learn more about Bharath Chandra. Feel free to ask about his skills, education, projects, or interests!";
+      return "Hello! I'm here to help you learn more about Bharath Chandra. Feel free to ask about his skills, education, projects, experience, or interests!";
     }
     
-    return "I can help you learn about Bharath's skills (Python, React, web development), education, projects, interests, or how to contact him. What would you like to know?";
+    if (message.includes('movie') || message.includes('recommendation')) {
+      return "Bharath's Movie Recommendation System is a Python-based project that uses machine learning algorithms and collaborative filtering to suggest movies based on user preferences!";
+    }
+    
+    return "I can help you learn about Bharath's technical skills (Python, React, UI/UX), education, projects, internship experience, certifications, or how to contact him. What would you like to know?";
   };
 
   const handleSendMessage = () => {
@@ -172,7 +184,7 @@ const Chatbot = ({ darkMode }: ChatbotProps) => {
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Ask about Bharath's skills..."
+                placeholder="Ask about Bharath..."
                 className={`flex-1 px-3 py-2 rounded-lg text-sm border focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                   darkMode 
                     ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' 

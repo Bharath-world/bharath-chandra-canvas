@@ -9,19 +9,11 @@ interface ProjectsProps {
 const Projects = ({ darkMode }: ProjectsProps) => {
   const projects = [
     {
-      title: "E-Commerce Web Application",
-      description: "A full-stack e-commerce platform with user authentication, product catalog, shopping cart, and payment integration.",
-      techStack: ["React", "Python", "Django", "PostgreSQL", "CSS"],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=400",
-      githubLink: "#",
-      liveLink: "#"
-    },
-    {
-      title: "Task Management System",
-      description: "A responsive task management application with drag-and-drop functionality, real-time updates, and team collaboration features.",
-      techStack: ["React", "JavaScript", "HTML", "CSS", "Firebase"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=400",
-      githubLink: "#",
+      title: "Movie Recommendation System",
+      description: "A Python-based recommendation system that suggests movies based on user preferences using machine learning algorithms and collaborative filtering.",
+      techStack: ["Python", "Machine Learning", "Pandas", "Scikit-learn", "Flask"],
+      image: "https://images.unsplash.com/photo-1489599577388-08d89fb8d8c8?auto=format&fit=crop&w=800&h=400",
+      githubLink: "https://github.com/Bharath-world",
       liveLink: "#"
     },
     {
@@ -29,22 +21,30 @@ const Projects = ({ darkMode }: ProjectsProps) => {
       description: "A modern, responsive portfolio website showcasing projects and skills with dark/light mode toggle and smooth animations.",
       techStack: ["React", "TypeScript", "Tailwind CSS", "HTML"],
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=400",
-      githubLink: "#",
+      githubLink: "https://github.com/Bharath-world",
       liveLink: "#"
     },
     {
-      title: "Weather Forecast App",
-      description: "A responsive weather application with location-based forecasts, interactive maps, and historical weather data visualization.",
-      techStack: ["Python", "React", "API Integration", "Chart.js"],
+      title: "UI/UX Design Projects",
+      description: "Collection of user interface and experience designs created for various clients and personal projects, focusing on modern design principles.",
+      techStack: ["Figma", "Adobe XD", "Photoshop", "UI Design"],
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=400",
+      githubLink: "https://github.com/Bharath-world",
+      liveLink: "https://www.behance.net/bharathchandra29"
+    },
+    {
+      title: "Data Analysis Dashboard",
+      description: "Interactive dashboard for data visualization and analysis using Python libraries, created during Accenture certification program.",
+      techStack: ["Python", "Pandas", "Matplotlib", "Jupyter", "Data Analysis"],
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=400",
-      githubLink: "#",
+      githubLink: "https://github.com/Bharath-world",
       liveLink: "#"
     }
   ];
 
   return (
     <section id="projects" className={`py-20 ${
-      darkMode ? 'bg-gray-900' : 'bg-gray-50'
+      darkMode ? 'bg-gray-800' : 'bg-white'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -57,7 +57,7 @@ const Projects = ({ darkMode }: ProjectsProps) => {
             darkMode ? 'text-gray-300' : 'text-gray-600'
           }`}>
             Here are some of the projects I've worked on, showcasing my skills in 
-            web development and problem-solving.
+            development, design, and data analysis.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ const Projects = ({ darkMode }: ProjectsProps) => {
             <div
               key={index}
               className={`rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 ${
-                darkMode ? 'bg-gray-800' : 'bg-white'
+                darkMode ? 'bg-gray-900' : 'bg-white'
               }`}
             >
               <div className="relative overflow-hidden">
@@ -109,6 +109,8 @@ const Projects = ({ darkMode }: ProjectsProps) => {
                 <div className="flex space-x-4">
                   <a
                     href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors duration-200 ${
                       darkMode 
                         ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' 
@@ -120,10 +122,12 @@ const Projects = ({ darkMode }: ProjectsProps) => {
                   </a>
                   <a
                     href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
                   >
                     <ExternalLink size={16} />
-                    <span>Live Demo</span>
+                    <span>View Project</span>
                   </a>
                 </div>
               </div>

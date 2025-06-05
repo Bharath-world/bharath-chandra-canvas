@@ -1,24 +1,32 @@
 
 import React from 'react';
-import { Code, Palette, Camera, Film } from 'lucide-react';
+import { Code, Palette, Camera, Film, Database, Globe } from 'lucide-react';
 
 interface AboutProps {
   darkMode: boolean;
 }
 
 const About = ({ darkMode }: AboutProps) => {
-  const skills = [
+  const technicalSkills = [
     { name: 'Python', level: 85 },
     { name: 'HTML/CSS', level: 90 },
-    { name: 'React', level: 80 },
-    { name: 'JavaScript', level: 75 },
+    { name: 'JavaScript', level: 80 },
+    { name: 'React', level: 75 },
+    { name: 'MongoDB', level: 70 },
+    { name: 'MySQL', level: 75 },
+  ];
+
+  const softSkills = [
+    { name: 'Communication', icon: Code, description: 'Clear and effective communication' },
+    { name: 'Teamwork', icon: Globe, description: 'Collaborative problem solving' },
+    { name: 'Creativity', icon: Palette, description: 'Innovative thinking and design' },
   ];
 
   const interests = [
-    { name: 'Video Editing', icon: Film, description: 'Creating engaging video content' },
-    { name: 'Communication', icon: Code, description: 'Effective team collaboration' },
+    { name: 'Cinema', icon: Film, description: 'Film analysis and appreciation' },
+    { name: 'Video Editing', icon: Camera, description: 'Creating engaging video content' },
     { name: 'Fashion', icon: Palette, description: 'Style and aesthetic appreciation' },
-    { name: 'Cinema', icon: Camera, description: 'Film analysis and appreciation' },
+    { name: 'UI Design', icon: Code, description: 'User interface and experience design' },
   ];
 
   return (
@@ -35,41 +43,21 @@ const About = ({ darkMode }: AboutProps) => {
           <p className={`text-lg max-w-3xl mx-auto ${
             darkMode ? 'text-gray-300' : 'text-gray-600'
           }`}>
-            A passionate fresher software developer eager to contribute to innovative projects 
-            and grow in the tech industry.
+            I'm a Computer Science graduate from Sreyas Institute of Engineering and Technology, 
+            passionate about design and development.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Education & Background */}
+          {/* Technical Skills */}
           <div>
             <h3 className={`text-2xl font-bold mb-6 ${
               darkMode ? 'text-white' : 'text-gray-900'
             }`}>
-              Education & Background
-            </h3>
-            <div className={`p-6 rounded-lg mb-6 ${
-              darkMode ? 'bg-gray-700' : 'bg-gray-50'
-            }`}>
-              <h4 className={`text-lg font-semibold mb-2 ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}>
-                Bachelor's in Computer Science
-              </h4>
-              <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                Fresh graduate with a strong foundation in software development principles, 
-                algorithms, and modern web technologies.
-              </p>
-            </div>
-
-            {/* Skills */}
-            <h4 className={`text-xl font-semibold mb-4 ${
-              darkMode ? 'text-white' : 'text-gray-900'
-            }`}>
               Technical Skills
-            </h4>
-            <div className="space-y-4">
-              {skills.map((skill) => (
+            </h3>
+            <div className="space-y-4 mb-8">
+              {technicalSkills.map((skill) => (
                 <div key={skill.name}>
                   <div className="flex justify-between items-center mb-1">
                     <span className={`font-medium ${
@@ -90,6 +78,41 @@ const About = ({ darkMode }: AboutProps) => {
                       className="bg-blue-600 h-2 rounded-full transition-all duration-1000 ease-out"
                       style={{ width: `${skill.level}%` }}
                     ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Soft Skills */}
+            <h4 className={`text-xl font-semibold mb-4 ${
+              darkMode ? 'text-white' : 'text-gray-900'
+            }`}>
+              Soft Skills
+            </h4>
+            <div className="grid grid-cols-1 gap-3">
+              {softSkills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className={`p-3 rounded-lg transition-all duration-200 ${
+                    darkMode 
+                      ? 'bg-gray-700 hover:bg-gray-600' 
+                      : 'bg-gray-50 hover:bg-gray-100'
+                  }`}
+                >
+                  <div className="flex items-center space-x-3">
+                    <skill.icon className="w-5 h-5 text-blue-600" />
+                    <div>
+                      <h5 className={`font-medium ${
+                        darkMode ? 'text-white' : 'text-gray-900'
+                      }`}>
+                        {skill.name}
+                      </h5>
+                      <p className={`text-sm ${
+                        darkMode ? 'text-gray-300' : 'text-gray-600'
+                      }`}>
+                        {skill.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -138,8 +161,8 @@ const About = ({ darkMode }: AboutProps) => {
               </h4>
               <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                 I'm passionate about creating solutions that make a difference. Whether it's 
-                developing user-friendly applications or collaborating with teams to bring 
-                innovative ideas to life, I'm always eager to learn and contribute.
+                developing user-friendly applications or designing beautiful interfaces, I'm 
+                always eager to learn and contribute to meaningful projects.
               </p>
             </div>
           </div>
