@@ -70,7 +70,7 @@ const Hero = ({ darkMode }: HeroProps) => {
             <div className="relative">
               <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&h=800"
+                  src="/lovable-uploads/57b75450-19b8-4515-aab9-43f10725b785.png"
                   alt="Bharath Chandra"
                   className="w-full h-full object-cover"
                 />
