@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
@@ -7,6 +6,7 @@ import Projects from '../components/Projects';
 import Resume from '../components/Resume';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Chatbot from '../components/Chatbot';
 
 const Index = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -46,6 +46,7 @@ const Index = () => {
       <Resume darkMode={darkMode} />
       <Contact darkMode={darkMode} />
       <Footer darkMode={darkMode} />
+      <Chatbot darkMode={darkMode} />
     </div>
   );
 };
