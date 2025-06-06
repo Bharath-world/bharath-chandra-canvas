@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github, Linkedin, Instagram, Behance, Phone, Mail } from 'lucide-react';
+import { Github, Linkedin, Instagram, Phone, Mail } from 'lucide-react';
 
 interface FooterProps {
   darkMode: boolean;
@@ -109,18 +109,6 @@ const Footer = ({ darkMode }: FooterProps) => {
                 }`}
               >
                 <Instagram size={18} />
-              </a>
-              <a
-                href="https://www.behance.net/bharathchandra29"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`p-3 rounded-full transition-all duration-200 hover:scale-110 ${
-                  darkMode 
-                    ? 'bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700' 
-                    : 'bg-gray-100 text-gray-600 hover:text-gray-900 hover:bg-gray-200'
-                }`}
-              >
-                <Behance size={18} />
               </a>
             </div>
           </div>
