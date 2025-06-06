@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Download, FileText } from 'lucide-react';
+import { downloadResume } from '../utils/resumeGenerator';
 
 interface ResumeProps {
   darkMode: boolean;
@@ -8,13 +9,7 @@ interface ResumeProps {
 
 const Resume = ({ darkMode }: ResumeProps) => {
   const handleDownload = () => {
-    // In a real application, this would download the actual resume file
-    const link = document.createElement('a');
-    link.href = '/resume.pdf'; // This would be the actual path to the resume PDF
-    link.download = 'Bharath_Chandra_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    downloadResume();
   };
 
   return (
@@ -56,7 +51,7 @@ const Resume = ({ darkMode }: ResumeProps) => {
             darkMode ? 'text-gray-300' : 'text-gray-600'
           }`}>
             Get a comprehensive overview of my technical skills, educational background, 
-            projects, and professional experience in software development.
+            projects, and professional experience in software development and UI/UX design.
           </p>
 
           <button
@@ -64,7 +59,7 @@ const Resume = ({ darkMode }: ResumeProps) => {
             className="inline-flex items-center space-x-3 px-8 py-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
           >
             <Download size={20} />
-            <span>Download Resume (PDF)</span>
+            <span>Download Resume (HTML/PDF)</span>
           </button>
 
           <div className={`mt-8 p-4 rounded-lg ${
@@ -89,10 +84,10 @@ const Resume = ({ darkMode }: ResumeProps) => {
                 • Project Details
               </div>
               <div className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                • Certifications
+                • Work Experience
               </div>
               <div className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                • Professional Summary
+                • Certifications
               </div>
             </div>
           </div>

@@ -1,11 +1,16 @@
 
 import React from 'react';
+import { downloadResume } from '../utils/resumeGenerator';
 
 interface HeroProps {
   darkMode: boolean;
 }
 
 const Hero = ({ darkMode }: HeroProps) => {
+  const handleDownloadResume = () => {
+    downloadResume();
+  };
+
   return (
     <section id="home" className={`min-h-screen flex items-center justify-center ${
       darkMode ? 'bg-gray-900' : 'bg-gradient-to-br from-blue-50 to-indigo-100'
@@ -35,13 +40,7 @@ const Hero = ({ darkMode }: HeroProps) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
-                onClick={() => {
-                  // Create a temporary link to trigger download
-                  const link = document.createElement('a');
-                  link.href = '/placeholder-resume.pdf'; // This would be replaced with actual resume
-                  link.download = 'Bharath_Chandra_Resume.pdf';
-                  link.click();
-                }}
+                onClick={handleDownloadResume}
                 className="px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
               >
                 Download Resume

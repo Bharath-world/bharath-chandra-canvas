@@ -10,32 +10,32 @@ const Projects = ({ darkMode }: ProjectsProps) => {
   const projects = [
     {
       title: "Movie Recommendation System",
-      description: "A Python-based recommendation system that suggests movies based on user preferences using machine learning algorithms and collaborative filtering.",
-      techStack: ["Python", "Machine Learning", "Pandas", "Scikit-learn", "Flask"],
-      image: "https://images.unsplash.com/photo-1489599577388-08d89fb8d8c8?auto=format&fit=crop&w=800&h=400",
+      description: "A Python-based recommendation system that suggests movies based on user preferences using machine learning algorithms and collaborative filtering. Features content-based and collaborative filtering approaches.",
+      techStack: ["Python", "Machine Learning", "Pandas", "Scikit-learn", "Flask", "NumPy"],
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&h=400",
       githubLink: "https://github.com/Bharath-world",
       liveLink: "#"
     },
     {
       title: "Personal Portfolio Website",
-      description: "A modern, responsive portfolio website showcasing projects and skills with dark/light mode toggle and smooth animations.",
-      techStack: ["React", "TypeScript", "Tailwind CSS", "HTML"],
+      description: "A modern, responsive portfolio website showcasing projects and skills with dark/light mode toggle, smooth animations, and interactive chatbot functionality.",
+      techStack: ["React", "TypeScript", "Tailwind CSS", "Lucide Icons"],
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=400",
       githubLink: "https://github.com/Bharath-world",
       liveLink: "#"
     },
     {
       title: "UI/UX Design Projects",
-      description: "Collection of user interface and experience designs created for various clients and personal projects, focusing on modern design principles.",
-      techStack: ["Figma", "Adobe XD", "Photoshop", "UI Design"],
+      description: "Collection of user interface and experience designs created for various clients and personal projects, focusing on modern design principles and user-centered design approaches.",
+      techStack: ["Figma", "Adobe XD", "Photoshop", "UI Design", "Prototyping"],
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=400",
       githubLink: "https://github.com/Bharath-world",
       liveLink: "https://www.behance.net/bharathchandra29"
     },
     {
       title: "Data Analysis Dashboard",
-      description: "Interactive dashboard for data visualization and analysis using Python libraries, created during Accenture certification program.",
-      techStack: ["Python", "Pandas", "Matplotlib", "Jupyter", "Data Analysis"],
+      description: "Interactive dashboard for data visualization and analysis using Python libraries, created during Accenture certification program. Features real-time data processing and visualization.",
+      techStack: ["Python", "Pandas", "Matplotlib", "Jupyter", "Data Analysis", "Seaborn"],
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=400",
       githubLink: "https://github.com/Bharath-world",
       liveLink: "#"
